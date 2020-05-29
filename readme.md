@@ -16,12 +16,15 @@ First create a developer account and register an application to use the API:
 
 
 ## Use the API
-
+<strike>
 The API is accessible through the [MaShape Marketplace](https://market.mashape.com/). You'll need to signup for an account with them. You can read more about MaShape on their site, but they help provide security, analytics and other services.
 
 1. Register for a MaShape account.
 1. On MaShape, click on "Applications" and choose your application. Then click "Get the Keys" and copy your key. You'll need it to make API calls.
 1. Review the [War Dragons APIs](https://market.mashape.com/david8/war-dragons). You'll need to be invited to get access to this project. To make an API key, you'll need yhour MaShape Application Key AND your player's War Dragons API Key.
+</strike>
+
+_Currently, MaShape is not supported. We currently have a single X-Mashape-Key that can be granted upon request._
 
 Example:
 
