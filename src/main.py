@@ -8,7 +8,6 @@ from google.appengine.api import urlfetch
 # fill in your applications data here:
 CLIENT_ID = '???'
 CLIENT_SECRET = '???'
-MASHAPE_KEY = '???'
 
 AUTH_SERVER = 'api-dot-pgdragonsong.appspot.com'
 API_SERVER = 'wardragons.p.mashape.com'
@@ -67,7 +66,7 @@ class ProxyAPIRequest(webapp2.RequestHandler):
             self.response.out.write('api key missing')
             return
         headers = {
-            'X-Mashape-Key': MASHAPE_KEY,
+            'X-Client-Secret': CLIENT_SECRET,
             'X-WarDragons-APIKey': api_key,
         }
 

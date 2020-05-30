@@ -24,16 +24,16 @@ The API is accessible through the [MaShape Marketplace](https://market.mashape.c
 1. Review the [War Dragons APIs](https://market.mashape.com/david8/war-dragons). You'll need to be invited to get access to this project. To make an API key, you'll need yhour MaShape Application Key AND your player's War Dragons API Key.
 </strike>
 
-_Currently, MaShape is not supported. We currently have a single X-Mashape-Key that can be granted upon request._
+_Currently, MaShape is not supported._
 
 Example:
 
     curl --get --include 'https://wardragons.p.mashape.com/atlas/castle/public_info?castle_ids=%5B%22A130-0%22%2C+%22A130-1%22%2C+%22A90-0%22%5D' \
-      -H 'X-Mashape-Key: hidden' \
+      -H 'X-Client-Secret: hidden' \
       -H 'X-WarDragons-APIKey: apikey-hidden'
 
 To make an API call, notice that you need to include two custom headers:
-    * `X-Mashape-Key` - this is the key associated with your Mashape application
+    * `X-Client-Secret` - this is the secret key visible on the api console.
     * `X-WarDragons-APIKey` - this is the API key associated with the player who has authorized your app
 
 
