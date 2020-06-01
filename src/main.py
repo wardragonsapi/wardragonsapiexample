@@ -1,5 +1,7 @@
 """Demo app for the War Dragons API."""
+import hashlib
 import json
+import time
 import urllib
 import webapp2
 
@@ -9,8 +11,7 @@ from google.appengine.api import urlfetch
 CLIENT_ID = '???'
 CLIENT_SECRET = '???'
 
-AUTH_SERVER = 'api-dot-pgdragonsong.appspot.com'
-API_SERVER = 'wardragons.p.mashape.com'
+AUTH_SERVER = API_SERVER = 'api-dot-pgdragonsong.appspot.com'
 
 
 class AuthCallback(webapp2.RequestHandler):
@@ -65,10 +66,21 @@ class ProxyAPIRequest(webapp2.RequestHandler):
             self.error(400)
             self.response.out.write('api key missing')
             return
+
+        now = int(time.time())
         headers = {
-            'X-Client-Secret': CLIENT_SECRET,
             'X-WarDragons-APIKey': api_key,
+            'X-WarDragons-Request-Timestamp': now
         }
+
+        message = ':'.join([
+            CLIENT_SECRET,
+            api_key,
+            str(now)])
+        message = str(message)
+        generated_signature = hashlib.sha256(message).hexdigest()
+
+        headers['X-WarDragons-Signature'] = generated_signature
 
         # get the para
         url = 'https://%s%s' % (API_SERVER, self.request.path_qs)
