@@ -14,21 +14,6 @@ First create a developer account and register an application to use the API:
 1. Verify your e-mail address by clicking the link in a confirmation e-mail you should receive.
 1. [Register your Application](https://api-dot-pgdragonsong.appspot.com/api/console/apps) (the confirmation e-mail should take you here). You can omit the server URL if you only want to use the API for your own player.
 
-
-## Use the API
-_Currently, MaShape is not supported._
-
-Example:
-
-    curl --get --include 'https://wardragons.p.mashape.com/atlas/castle/public_info?castle_ids=%5B%22A130-0%22%2C+%22A130-1%22%2C+%22A90-0%22%5D' \
-      -H 'X-Client-Secret: hidden' \
-      -H 'X-WarDragons-APIKey: apikey-hidden'
-
-To make an API call, notice that you need to include two custom headers:
-    * `X-Client-Secret` - this is the secret key visible on the api console.
-    * `X-WarDragons-APIKey` - this is the API key associated with the player who has authorized your app
-
-
 ***
 
 
