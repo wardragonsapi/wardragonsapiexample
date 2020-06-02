@@ -61,7 +61,7 @@ Once you have an app and a player's API Key, you can authenticate requests. In o
     X-WarDragons-Request-Timestamp: [timestamp of request, should be standard epoch in number of seconds]
     X-WarDragons-Signature: [signature of request]
     
-The Signature will be defined as the base64 encoding of sha256 on 
+The Signature will be defined as the sha256 (with hexidecimal encoding) of the following string:
 
     [your client secret] + ':' + [X-WarDragons-APIKey] + ':' + [X-WarDragons-Request-Timestamp] 
 
