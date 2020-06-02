@@ -77,4 +77,4 @@ This GitHub project is intended to serve as a simple reference example of how to
 To test it out:
 
 1. Go to [https://war-dragons-api-demo.appspot.com/authorize](https://war-dragons-api-demo.appspot.com/authorize) and signin to get your API Key. Be sure to copy it to your computer!
-1. Try calling an API through the demo app by using the following URL (but fill in your API Key!): https://war-dragons-api-demo.appspot.com/player/public/my_profile?apikey=PASTE_YOUR_KEY_HERE
+1. Try calling an API through the demo app by using the following URL (but fill in your API Key!): https://war-dragons-api-demo.appspot.com/api/v1/player/public/my_profile?apikey=PASTE_YOUR_KEY_HERE
