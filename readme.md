@@ -58,7 +58,7 @@ Once you have a player's API Key, store it (you should not ask for it more than 
 Once you have an app and a player's API Key, you can authenticate requests. In order to do so, you must provide the following headers:
 
     X-WarDragons-APIKey: [key of player using your app]
-    X-WarDragons-Request-Timestamp: [timestamp of request, should be standard epoch in seconds]
+    X-WarDragons-Request-Timestamp: [timestamp of request, should be standard epoch in number of seconds]
     X-WarDragons-Signature: [signature of request]
     
 The Signature will be defined as the base64 encoding of sha256 on 
